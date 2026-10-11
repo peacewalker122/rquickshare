@@ -44,9 +44,9 @@
   "app": {
     "windows": [
       {
-        "title": "RQuickShare",
-        "width": 900,
-        "height": 600,
+        "title": "Quick Share",
+        "width": 420,
+        "height": 640,
         "resizable": true,
         "fullscreen": false
       }

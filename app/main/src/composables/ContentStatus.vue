@@ -43,7 +43,7 @@ function openFilePicker() {
 </script>
 
 <template>
-	<h3 class="mb-4 font-medium text-xl">
+	<h3 class="mb-3 font-medium text-lg">
 		<span v-if="props.vm.displayedIsEmpty">Ready to receive{{ props.vm.outboundPayload != undefined ? ' / send' : '' }}</span>
 		<span v-else>Nearby devices</span>
 	</h3>
@@ -55,9 +55,9 @@ function openFilePicker() {
 	</div>
 
 	<div
-		v-if="props.vm.displayedIsEmpty && props.vm.outboundPayload === undefined" class="w-full border
-        rounded-2xl p-6 flex flex-col justify-center items-center transition duration-150 ease-in-out mt-auto"
-		:class="{'border-green-200 bg-green-100 scale-105': props.vm.isDragHovering}">
+		v-if="props.vm.displayedIsEmpty && props.vm.outboundPayload === undefined" class="w-full border border-neutral-700
+        bg-neutral-800/50 rounded-2xl p-6 flex flex-col justify-center items-center transition duration-150 ease-in-out mt-auto"
+		:class="{'border-emerald-500/60 bg-emerald-500/10 scale-[1.02]': props.vm.isDragHovering}">
 		<svg
 			xmlns="http://www.w3.org/2000/svg" height="24"
 			viewBox="0 -960 960 960" width="24" class="w-8 h-8">

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
+/* Island build: no remote font imports; window visibility must never depend on the network. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,7 +18,7 @@
 html,
 body,
 #app {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
 	outline: 1px solid transparent;
 	-webkit-backface-visibility: hidden;
 	transform: translateZ(0);
@@ -66,7 +66,7 @@ body,
 
 .status-indicator .circle-main {
     z-index: 3;
-    background: #000
+    background: #34d399
 }
 
 .status-indicator .circle-main.circle--animated {
@@ -75,7 +75,7 @@ body,
 
 .status-indicator .circle-secondary {
     z-index: 2;
-    background: rgba(0, 0, 0, .1)
+    background: rgba(52, 211, 153, .15)
 }
 
 .status-indicator .circle-secondary.circle--animated {
@@ -84,7 +84,7 @@ body,
 
 .status-indicator .circle-tertiary {
     z-index: 1;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(52, 211, 153, .45);
     opacity: 1
 }
 
@@ -205,7 +205,7 @@ body,
 }
 
 .circular-progress circle.bg {
-  	stroke: #ddd;
+  	stroke: #525252;
 }
 
 .circular-progress circle.fg {
@@ -214,7 +214,7 @@ body,
 	stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
 	transition: stroke-dasharray 0.3s linear 0s;
 
-	@apply stroke-black
+	@apply stroke-emerald-400
 }
 
 .error circle.bg, .error circle.fg {

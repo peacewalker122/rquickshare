@@ -43,6 +43,11 @@ pub struct AppState {
 
 #[tokio::main]
 async fn main() -> Result<(), anyhow::Error> {
+    // WebKitGTK fails to map its window when GTK_THEME is preset in the
+    // environment (observed on Hyprland/Wayland). Strip it; the app is themed
+    // by its own stylesheet.
+    std::env::remove_var("GTK_THEME");
+
     // Define tauri async runtime to be tokio
     tauri::async_runtime::set(tokio::runtime::Handle::current());
 
