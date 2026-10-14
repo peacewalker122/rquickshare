@@ -48,7 +48,8 @@
         "width": 420,
         "height": 640,
         "resizable": true,
-        "fullscreen": false
+        "fullscreen": false,
+        "theme": "Dark"
       }
     ],
     "security": {

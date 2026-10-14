@@ -28,8 +28,8 @@ function openDownloadPicker() {
 </script>
 
 <template>
-	<div v-if="vm.settingsOpen" class="absolute z-10 w-full h-full flex justify-center items-center bg-black bg-opacity-25">
-		<div class="bg-white rounded-xl shadow-xl p-4 w-[24rem]">
+	<div v-if="vm.settingsOpen" class="absolute z-10 w-full h-full flex justify-center items-center bg-black/50">
+		<div class="bg-neutral-800 border border-neutral-700 rounded-xl shadow-xl p-4 w-[24rem] text-neutral-100">
 			<div class="flex flex-row justify-between items-center">
 				<h3 class="font-medium text-xl">
 					Settings
@@ -41,26 +41,26 @@ function openDownloadPicker() {
 			<div class="py-4 flex flex-col">
 				<div class="form-control hover:bg-gray-500 hover:bg-opacity-10 rounded-xl p-3">
 					<label class="cursor-pointer flex flex-row justify-between items-center" @click="utils.setAutoStart(vm, !vm.autostart)">
-						<span class="label-text">Start on boot</span>
+						<span class="text-neutral-100">Start on boot</span>
 						<input type="checkbox" :checked="vm.autostart" class="checkbox focus:outline-none">
 					</label>
 				</div>
 				<div class="form-control hover:bg-gray-500 hover:bg-opacity-10 rounded-xl p-3">
 					<label class="cursor-pointer flex flex-row justify-between items-center" @click="utils.setRealClose(vm, !vm.realclose)">
-						<span class="label-text">Keep running on close</span>
+						<span class="text-neutral-100">Keep running on close</span>
 						<input type="checkbox" :checked="!vm.realclose" class="checkbox focus:outline-none">
 					</label>
 				</div>
 				<div class="form-control hover:bg-gray-500 hover:bg-opacity-10 rounded-xl p-3">
 					<label class="cursor-pointer flex flex-row justify-between items-center" @click="utils.setStartMinimized(vm, !vm.startminimized)">
-						<span class="label-text">Start minimized</span>
+						<span class="text-neutral-100">Start minimized</span>
 						<input type="checkbox" :checked="vm.startminimized" class="checkbox focus:outline-none">
 					</label>
 				</div>
 				<div class="form-control hover:bg-gray-500 hover:bg-opacity-10 rounded-xl p-3">
 					<label class="cursor-pointer flex flex-col items-start" @click="openDownloadPicker()">
-						<span class="">Change download folder</span>
-						<span class="overflow-hidden whitespace-nowrap text-ellipsis text-xs max-w-80">
+						<span class="text-neutral-100">Change download folder</span>
+						<span class="overflow-hidden whitespace-nowrap text-ellipsis text-xs max-w-80 text-neutral-400">
 							> {{ vm.downloadPath ?? 'OS User\'s download folder' }}
 						</span>
 					</label>
